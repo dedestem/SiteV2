@@ -1,78 +1,40 @@
-function applyHalloweenTheme() {
-    // Halloween-lettertype toevoegen aan de head
-    let fontLink = document.createElement("link");
-    fontLink.rel = "stylesheet";
-    fontLink.href = "https://fonts.googleapis.com/css2?family=Creepster&display=swap";
-    document.head.appendChild(fontLink);
+function AddBanner() {
+    // Globaal Banner Systeem
+    //
+    // Kies uit Danger-Banner, Warning-Banner en Notice-Banner
+    // Kies voor een Icoontje uit /Assets/Scripts/Icons.js
+    // Geef het een link voor meer info (Optioneel) 
 
-    // Achtergrond en tekst kleuren instellen
-    document.body.style.backgroundColor = "#2e2e2e"; // Donkergrijze achtergrond
-    document.body.style.color = "#ff6f61"; // Spooky oranje tekst
-    document.body.style.fontFamily = "'Creepster', cursive"; // Halloween-font toepassen
-    
-    // Links een oranje kleur en glow-effect geven
-    let links = document.querySelectorAll("a");
-    links.forEach(link => {
-        link.style.color = "#ff7518";
-        link.style.textShadow = "0 0 5px #ff7518";
-    });
 
-    // Knoppen aanpassen met Halloween kleuren en effecten
-    let buttons = document.querySelectorAll("button");
-    buttons.forEach(button => {
-        button.style.backgroundColor = "#d4af37"; // Goudachtige kleur
-        button.style.color = "#2e2e2e"; // Donkere tekst
-        button.style.border = "2px solid #ff7518"; // Oranje rand
+    // Maak de hoofdcontainer aan
+    const Banner = document.createElement('div');
+    Banner.className = 'Danger-Banner'; // Hier de banner type aanpassen
 
-        // Hover-effect voor knoppen
-        button.addEventListener("mouseenter", () => {
-            button.style.transform = "scale(1.05)";
-            button.style.boxShadow = "0 0 10px #ff7518";
-        });
+    // Voeg een afbeelding toe
+    const Icon = document.createElement('img');
+    Icon.alt = 'Warning';
+    Icon.className = 'Icon-CubeWarningIcon'; // Hier een Icon Toevoegen
+    Banner.appendChild(Icon);
 
-        button.addEventListener("mouseleave", () => {
-            button.style.transform = "scale(1)";
-            button.style.boxShadow = "none";
-        });
-    });
+    // Voeg een tekst toe
+    const Text = document.createElement('h2');
+    Text.textContent = 'You are currently viewing a preview of davidnet V2'; // Hier tekst aanpassen
+    Banner.appendChild(Text);
 
-    // Creepy rand toevoegen aan de pagina
-    let spookyBorder = document.createElement("div");
-    spookyBorder.style.position = "fixed";
-    spookyBorder.style.top = "0";
-    spookyBorder.style.left = "0";
-    spookyBorder.style.width = "100vw";
-    spookyBorder.style.height = "100vh";
-    spookyBorder.style.pointerEvents = "none";
-    spookyBorder.style.backgroundImage = "url('https://www.transparenttextures.com/patterns/black-linen.png')";
-    spookyBorder.style.opacity = "0.2";
-    spookyBorder.style.backgroundRepeat = "repeat";
-    spookyBorder.style.zIndex = "9999";
-    document.body.appendChild(spookyBorder);
+    // Voeg een link toe
+    const Link = document.createElement('a');
+    Link.href = 'https://davidnet.net/Forum/View?21'; // Hier link url aanpassen
+    Link.textContent = 'Read more'; // Hier link tekst aanpassen
+    Banner.appendChild(Link); // Dit stukje commenten als je de link uit wil doen
+
+    // Voeg alles toe aan de body of een specifieke container
+    const nav = document.querySelector('nav'); // Zoek het nav element
+    document.body.insertBefore(Banner, nav.nextSibling); // Voeg Banner toe na nav
 }
 
-var halloweenTheme = false;
-
-(function() {
-    // Controleer of "www." in de URL aanwezig is vanwege CORS
-    if (window.location.hostname.startsWith("www.")) {
-        const newURL = window.location.protocol + "//" + window.location.hostname.replace("www.", "") + window.location.pathname + window.location.search;
-        window.location.replace(newURL);
-    }
-
-
-    if (localStorage.getItem('halloweenTheme')) {
-        const themeEnabled = localStorage.getItem('halloweenTheme') === 'true';
-        halloweenTheme = themeEnabled;
-    } else {
-        localStorage.setItem('halloweenTheme', 'false');
-    }
-
-})();
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    if (halloweenTheme == true) {
-        applyHalloweenTheme();
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    AddBanner();
+    updateIcons();
 });
+
+

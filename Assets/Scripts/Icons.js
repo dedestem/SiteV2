@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Initial load
-    updateIcons();
+    // Initial load (Geef tijd voor scripts icoonen toe te voegen)
+    setTimeout(() => {
+        updateIcons();
+    }, 100);
 
     // Listen for changes
     prefersDarkScheme.addEventListener('change', updateIcons);
