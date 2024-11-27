@@ -1,0 +1,31 @@
+/* Global Variables */
+:root {
+    --font-family: sans-serif;
+}
+
+
+/* Light mode & Fallback theme */
+:root {
+    /* Main */
+    --background-color: #f5f5f5;
+    --secondary-background-color: #171717;
+    --tertiary-background-color: #b8b4b4;
+    --p-text-color: #000000;
+
+    /* Navbar */
+    --nav-text-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Dark mode */
+    :root {
+        /* Main */
+        --background-color: #212121;
+        --secondary-background-color: #171717;
+        --tertiary-background-color: #1D1D1D;
+        --p-text-color: #ffffff;
+
+        /* Navbar */
+        --nav-text-color: #ffffff;
+    }
+}

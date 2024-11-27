@@ -1,0 +1,95 @@
+.Docabout {
+    width: calc(100% - 10vw);
+    height: 150px;
+  
+    padding-left: 10vw;
+    padding-top: 6vh;
+    background-color: var(--tertiary-background-color);
+    color: var(--p-text-color);
+
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.CardsContainer {
+    padding-left: 5vw;
+}
+
+.Cards {
+    width: 90vw;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Card {
+    width: 250px;
+    height: 250px;
+}
+
+.Card > h1 {
+    color: var(--p-text-color);
+    font-family: sans-serif;
+    font-weight: light;
+    height: 10px;
+}
+
+.CardLinks {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 20px;
+    gap: 3px;
+}
+
+.CardLinks > a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+/* Media Queries */
+@media (max-width:700px) {
+    .Cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .CardsContainer {
+        margin-left: 6vw;
+    }
+}
+
+.Container {
+    margin-left: 5vw;
+    margin-top: 4vh;
+}
+
+.Container > h1 {
+    font-family: sans-serif;
+    font-size: larger;
+    color: gray;
+}
+
+.Container > p {
+    font-family: sans-serif;
+    color: var(--p-text-color);
+}
+
+.Indent {
+    margin-left: 1.5vw;
+    font-family: sans-serif;
+    color: var(--p-text-color);
+}
+
+h1, h4 {
+    color: var(--p-text-color);
+}
+
+p {
+    color: var(--p-text-color);
+}

@@ -1,0 +1,101 @@
+.neutral-btn {
+    height: 40px;
+    width: fit-content;
+    min-width: 80px;
+    border-radius: 10px;
+
+    background-color: var(--neutral-color);
+    color: var(--neutral-text-color);
+
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.neutral-btn:hover {
+    background-color: var(--neutral-color-hover);
+}
+
+.action-btn {
+    height: 40px;
+    width: fit-content;
+    min-width: 80px;
+    border-radius: 10px;
+
+    background-color: var(--action-color);
+    color: var(--action-text-color);
+
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.action-btn:hover {
+    background-color: var(--action-color-hover);
+}
+
+.success-btn {
+    height: 40px;
+    width: fit-content;
+    min-width: 80px;
+    border-radius: 10px;
+
+    background-color: var(--success-color);
+    color: var(--success-text-color);
+
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.success-btn:hover {
+    background-color: var(--success-color-hover);
+}
+
+.warning-btn {
+    height: 40px;
+    width: fit-content;
+    min-width: 80px;
+    border-radius: 10px;
+
+    background-color: var(--warning-color);
+    color: var(--warning-text-color);
+
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.warning-btn:hover {
+    background-color: var(--warning-color-hover);
+}
+
+.danger-btn {
+    height: 40px;
+    width: fit-content;
+    min-width: 80px;
+    border-radius: 10px;
+
+    background-color: var(--danger-color);
+    color: var(--danger-text-color);
+
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.danger-btn:hover {
+    background-color: var(--danger-color-hover);
+}
+
+.discover-btn {
+    height: 40px;
+    width: fit-content;
+    min-width: 80px;
+    border-radius: 10px;
+
+    background-color: var(--discover-color);
+    color: var(--discover-text-color);
+
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.discover-btn:hover {
+    background-color: var(--discover-color-hover);
+}

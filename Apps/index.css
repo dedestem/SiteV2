@@ -1,0 +1,108 @@
+body {
+    overflow-x: hidden;
+}
+
+.Container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CardContainer {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.Card {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.Card:hover {
+    transform: scale(1.02);
+}
+
+.Card > h1 {
+    font-family: Verdana, sans-serif;
+    color: white;
+}
+
+.Card img {
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.Downloadbar {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Downloadbar2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.DownloadOptions {
+    width: 80px;
+    height: 20px;
+    display: none;
+    align-items: center;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+.CardButtons {
+    height: 30px;
+    width: fit-content;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .CardContainer {
+        padding: 4vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .CardContainer {
+        padding: 3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .Card {
+        width: 90%;
+    }
+
+    .Container {
+        margin-left: 8vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .CardContainer {
+        padding: 2vw;
+    }
+}
