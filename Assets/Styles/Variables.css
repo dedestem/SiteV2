@@ -1,6 +1,11 @@
 /* Global Variables */
 :root {
     --font-family: sans-serif;
+
+    /* Banners */
+    --danger-banner: rgba(255, 0, 0, 0.301);
+    --warning-banner: rgba(209, 231, 15, 0.507);
+    --notice-banner: rgba(0, 68, 255, 0.301);
 }
 
 

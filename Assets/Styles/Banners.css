@@ -1,0 +1,59 @@
+.Danger-Banner {
+    width: 100vw;
+    height: 40px;
+
+    background-color: var(--danger-banner);
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Danger-Banner > img {
+    height: 30px;
+}
+
+.Warning-Banner {
+    width: 100vw;
+    height: 40px;
+
+    background-color: var(--warning-banner);
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Warning-Banner > img {
+    height: 30px;
+}
+
+.Notice-Banner {
+    width: 100vw;
+    height: 40px;
+
+    background-color: var(--notice-banner);
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Notice-Banner > img {
+    height: 30px;
+}

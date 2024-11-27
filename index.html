@@ -31,7 +31,12 @@
         </noscript>
 
         <script>
-            window.location.href = "/Home/"
+            if (window.location.hostname === "davidnet.net" && window.location.protocol !== "https:") {
+                window.location.href = "https://davidnet.net" + window.location.pathname + window.location.search;
+            } else {
+                // Local 5500 Testing
+                window.location.href = "/Home/"
+            }
         </script>
     </body>
 </html> 
