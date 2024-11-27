@@ -35,7 +35,6 @@ function AddBanner(Type, Icoon, Tekst, LinkEnabled, LinkTekst, LinkUrl) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    AddBanner("Danger-Banner","Icon-CubeWarningIcon","Components missing!",false);
     AddBanner("Danger-Banner","Icon-CubeWarningIcon","You are currently viewing a preview of davidnet V2.",true,"Davidnet V1","https://davidnet.net");
     updateIcons();
 });
