@@ -1,10 +1,14 @@
 .Danger-Banner {
     width: calc(100vw - 40px);
-    height: 40px;
+    min-height: 40px;
+    height: fit-content;
+
     background-color: var(--danger-banner);
+
     display: flex;
     flex-direction: row;
     gap: 20px;
+
     align-items: center;
     justify-content: center;
     padding-left: 20px;
@@ -15,16 +19,12 @@
     height: 30px;
 }
 
-.Danger-Banner h2 {
-    font-size: 1.5rem; /* Basisgrootte voor h2 */
-    margin: 0;
-    white-space: nowrap; /* Voorkom dat de tekst afbreekt */
-}
-
 .Warning-Banner {
     width: 100vw;
     height: 40px;
+
     background-color: var(--warning-banner);
+
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -39,16 +39,12 @@
     height: 30px;
 }
 
-.Warning-Banner h2 {
-    font-size: 1.5rem;
-    margin: 0;
-    white-space: nowrap;
-}
-
 .Notice-Banner {
     width: 100vw;
     height: 40px;
+
     background-color: var(--notice-banner);
+
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -61,31 +57,4 @@
 
 .Notice-Banner > img {
     height: 30px;
-}
-
-.Notice-Banner h2 {
-    font-size: 1.5rem;
-    margin: 0;
-    white-space: nowrap;
-}
-
-/* Media queries voor mobiele schermen */
-@media (max-width: 768px) {
-    .Danger-Banner, .Warning-Banner, .Notice-Banner {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100vw;
-    }
-
-    .Danger-Banner h2, .Warning-Banner h2, .Notice-Banner h2 {
-        font-size: 1.25rem; /* Kleinere h2 voor mobiel */
-        text-align: center; /* Centraal uitgelijnd voor mobiel */
-    }
-
-    .Danger-Banner > img, .Warning-Banner > img, .Notice-Banner > img {
-        height: 25px; /* Kleinere afbeelding voor mobiel */
-    }
 }
