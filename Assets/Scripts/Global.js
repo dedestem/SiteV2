@@ -28,15 +28,21 @@ function AddBanner(Type, Icoon, Tekst, LinkEnabled, LinkTekst, LinkUrl) {
         Link.textContent = LinkTekst; // Hier link tekst aanpassen
         Banner.appendChild(Link); // Dit stukje commenten als je de link uit wil doen
     }
+    
+    const navs = document.querySelectorAll('nav');
+    if (navs.length > 0) {
+        // Pak het laatste nav-element
+        const lastNav = navs[navs.length - 1];
 
-    // Voeg alles toe aan de body of een specifieke container
-    const nav = document.querySelector('nav'); // Zoek het nav element
-    document.body.insertBefore(Banner, nav.nextSibling); // Voeg Banner toe na nav
+        lastNav.parentNode.insertBefore(Banner, lastNav.nextSibling);
+    } else {
+        console.warn("Global code loaded but there isnt support for the current Banner");
+    }
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     AddBanner("Danger-Banner","Icon-CubeWarningIcon","You are currently viewing a preview of davidnet V2.",true,"Davidnet V1","https://davidnet.net");
-    updateIcons();
 });
 
 

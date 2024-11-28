@@ -21,3 +21,8 @@
     display: flex;
     flex-direction: row;
 }
+
+
+.centertextx {
+    text-align: center;
+}

@@ -11,10 +11,13 @@
         <link rel="stylesheet" href="/Assets/Styles/Main.css">
         <link rel="stylesheet" href="/Assets/Styles/Utils.css">
         <link rel="stylesheet" href="/Assets/Styles/Banners.css">
+        <link rel="stylesheet" href="Styles/Textslide.css">
+        <link rel="stylesheet" href="Styles/Statistics.css">
 
         <script src="/Assets/Scripts/Nav.js"></script>
         <script src="/Assets/Scripts/Icons.js"></script>
         <script src="/Assets/Scripts/Global.js"></script>
+        <script src="Scripts/Textslide.js"></script>
     </head>
 
     <body>
@@ -25,5 +28,43 @@
             <a href="/Docs/">Docs</a>
             <img alt="Profile" src="/Assets/Icons/White/Account.svg" id="navprofile">
         </nav>
+        <nav style="height: 35px; background-color: var(--tertiary-background-color); padding-left: 15px; padding-right: 15px;">
+            <a href="/Apps#DFinder">DFinder</a>
+            <a href="/Apps#DQR">DQR</a>
+            <a href="/Docs/Placeholder/">Placeholder API</a>
+            <a href="/Docs/Extra/">Privacy & Terms</a>
+        </nav>
+        <main>
+            <div style="padding-top: 20px;" class="centerx">
+                <div class="text-slide" id="slide1">Welcome to Davidnet!</div>
+                <div class="text-slide" id="slide2">Try out the Apps!</div>
+                <div class="text-slide" id="slide3">Need profile pictures check out <a href="/Docs/Placeholder/">Placeholder API</a> </div>
+                <div class="text-slide" id="slide3">Create an Account to explore even more!</div>
+                <div class="text-slide" id="slide3">Chat with other users with <a href="/Chats">DN Chats</a></div>
+                <div class="text-slide" id="slide3" id="temperature">Weather Loading</div>
+                <div class="text-slide" id="slide3" id="humidity">Weather Loading</div>
+                <div class="text-slide" id="slide3" id="rain">Weather Loading</div>
+                <div class="text-slide" id="slide3" id="windspeed">Weather Loading</div>
+                <div class="text-slide" id="slide3">Need help? <a href="/Docs/Extra#Contact">Contact us</a></div>
+            </div>
+            <div style="padding-top: 100px;" class="StatisticsDiv">
+                <div class="Statistic">
+                    <h2>Placeholder API</h2>
+                    <p>??? calls</p>
+                </div>
+                <div class="Statistic">
+                    <h2>Apps downloaded</h2>
+                    <p>??? downloads</p>
+                </div>
+                <div class="Statistic">
+                    <h2>Total page views</h2>
+                    <p>??? views</p>
+                </div>
+                <div class="Statistic">
+                    <h2>Davidnet users</h2>
+                    <p>??? users</p>
+                </div>
+            </div>
+        </main>
     </body>
 </html> 

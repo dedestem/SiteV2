@@ -1,0 +1,7 @@
+.StatisticsDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+
+    justify-content: center;
+}
