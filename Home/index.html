@@ -13,11 +13,16 @@
         <link rel="stylesheet" href="/Assets/Styles/Banners.css">
         <link rel="stylesheet" href="Styles/Textslide.css">
         <link rel="stylesheet" href="Styles/Statistics.css">
+        <link rel="stylesheet" href="Styles/Boxes.css">
+        <link rel="stylesheet" href="Styles/Opensource.css">
+        <link rel="stylesheet" href="Styles/Button.css">
 
         <script src="/Assets/Scripts/Nav.js"></script>
         <script src="/Assets/Scripts/Icons.js"></script>
         <script src="/Assets/Scripts/Global.js"></script>
         <script src="Scripts/Textslide.js"></script>
+        <script src="Scripts/Weather.js"></script>
+        <script src="Scripts/Button.js"></script>
     </head>
 
     <body>
@@ -28,14 +33,14 @@
             <a href="/Docs/">Docs</a>
             <img alt="Profile" src="/Assets/Icons/White/Account.svg" id="navprofile">
         </nav>
-        <nav style="height: 35px; background-color: var(--tertiary-background-color); padding-left: 15px; padding-right: 15px;">
+        <nav class="BlockForMobile" style="z-index: 1; height: 35px; background-color: var(--tertiary-background-color); padding-left: 15px; padding-right: 15px;">
             <a href="/Apps#DFinder">DFinder</a>
             <a href="/Apps#DQR">DQR</a>
             <a href="/Docs/Placeholder/">Placeholder API</a>
             <a href="/Docs/Extra/">Privacy & Terms</a>
         </nav>
         <main>
-            <div style="padding-top: 20px;" class="centerx">
+            <div class="BlockForMobile centerx" style="padding-top: 40px;">
                 <div class="text-slide" id="slide1">Welcome to Davidnet!</div>
                 <div class="text-slide" id="slide2">Try out the Apps!</div>
                 <div class="text-slide" id="slide3">Need profile pictures check out <a href="/Docs/Placeholder/">Placeholder API</a> </div>
@@ -49,21 +54,170 @@
             </div>
             <div style="padding-top: 100px;" class="StatisticsDiv">
                 <div class="Statistic">
-                    <h2>Placeholder API</h2>
+                    <h2>API Calls</h2>
                     <p>??? calls</p>
                 </div>
-                <div class="Statistic">
+                <div class="BlockForMobile Statistic">
                     <h2>Apps downloaded</h2>
                     <p>??? downloads</p>
                 </div>
-                <div class="Statistic">
-                    <h2>Total page views</h2>
+                <div class="BlockForMobile Statistic">
+                    <h2>Page views</h2>
                     <p>??? views</p>
                 </div>
                 <div class="Statistic">
                     <h2>Davidnet users</h2>
                     <p>??? users</p>
                 </div>
+            </div>
+
+            <div style="padding-top: 200px;" class="boxes">
+                <div class="box">
+                    <div class="boxcontent">
+                        DQR the qr code generator
+                        <img src="/Assets/Previews/DQR-0.1.0.png">
+                    </div>
+                    <a href="/Apps#DQR">Get</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Davidnet status page.
+    
+                    </div>
+                    <a href="https://davidnet.net/Dashboard">Open</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Vingerhoedjes
+    
+                    </div>
+                    <a href="https://davidnet.net/Vingerhoedjes">Open</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Want to chat with another account try davidnet chats
+    
+                    </div>
+                    <a href="https://davidnet.net/Chats">Chat</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Short links generator
+    
+                    </div>
+                    <a href="https://davidnet.net/L">Open</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Manage your account!
+    
+                    </div>
+                    <a href="https://davidnet.net/Account">Manage</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Write or read something at the forums!
+    
+                    </div>
+                    <a href="https://davidnet.net/Forum/List">Open</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Use the docs to understand davidnet apps.
+                    </div>
+                    <a href="https://davidnet.net/Docs/">Open Docs</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Need help or have questions?
+    
+                    </div>
+                    <a href="/Docs/Extra#Contact">Contact us</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        DFinder the file browser
+                        <img src="/Assets/Previews/DFinder-0.2.0.png">
+                    </div>
+                    <a href="/Apps#DFinder">Get</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Read our privacy policy!
+                    </div>
+                    <a href="/Docs/Extra#Privacy">Read</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Stamboom
+                    </div>
+                    <a href="/Stamboom/">Open</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        Sitemap
+                    </div>
+                    <a href="/Errors/Lost">Lost?</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        <img src="https://placeholder.davidnet.net/public" style="height: 50%; width: 50%;border-radius: 50%; background-position: center; background-size: cover;"></img>
+                        <p>Placeholder api for initals and people</p>
+                    </div>
+                    <a href="/Docs/Placeholder">Read the docs!</a>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        <p>Clicks:</p>
+                        <p id="clicks"></p>
+                        <br>
+                        <br>
+                        <button class="button" id="clickButton">Click me!</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="boxcontent">
+                        <p id="temperature">Temperatuur: - °C</p>
+                        <p id="humidity">Luchtvochtigheid: - %</p>
+                        <p id="rain">Neerslag: - mm</p>
+                        <p id="windspeed">Windsnelheid: - km/h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding-top: 100px;" class="opensource">
+                <h1>Opensource</h1>
+                <a href="https://github.com/dedestem">Github</a>
+                <br>
+                <br>
+                <h2 style="padding-top: 20px;">My API's</h2>
+                <a href="https://github.com/dedestem/StateAPI">
+                  <img height="100" src="https://github-readme-stats.vercel.app/api/pin/?username=dedestem&repo=StateAPI&theme=codeSTACKr" alt="StateAPI Repo">
+                </a>
+                <a href="https://davidnet.net/Docs/Placeholder/">
+                  <img height="100" src="https://github-readme-stats.vercel.app/api/pin/?username=dedestem&repo=Placeholder&theme=codeSTACKr" alt="Placeholder Repo">
+                </a>
+                <br>
+                <br>
+                <h2>My Tauri Apps's</h2>
+                <a href="https://github.com/dedestem/dqr">
+                  <img height="100" src="https://github-readme-stats.vercel.app/api/pin/?username=dedestem&repo=dqr&theme=codeSTACKr" alt="dqr Repo">
+                </a>
+                <a href="https://github.com/dedestem/dfinder/">
+                  <img height="100" src="https://github-readme-stats.vercel.app/api/pin/?username=dedestem&repo=dfinder&theme=codeSTACKr" alt="dfinder Repo">
+                </a>
+                <br>
+                <br>
+                <h2>My backend</h2>
+                <a href="https://github.com/dedestem/DNBackend">
+                  <img height="100" src="https://github-readme-stats.vercel.app/api/pin/?username=dedestem&repo=dnbackend&theme=codeSTACKr" alt="dfinder Repo">
+                </a>
+            </div>
+
+            <div style="padding-top: 100px;" class="opensource">
+                <h3>Extra Info</h3>
+                <a href="/Docs/Extra/">Privacy Policy & Terms of service</a>
+                <a style="padding-top: 20px; padding-bottom: 100px;" href="/Docs/Extra#Contact">Contact Me</a>
             </div>
         </main>
     </body>

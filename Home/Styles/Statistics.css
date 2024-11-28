@@ -1,7 +1,23 @@
 .StatisticsDiv {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10vw;
 
     justify-content: center;
+}
+
+.Statistic {
+    background-color: var(--tertiary-background-color);
+    border-radius: 20px;
+    width: 12vw;
+    padding: 2vw;
+}
+
+@media (max-width: 768px) {
+    .Statistic {
+        background: none;
+        width: fit-content;
+        height: fit-content;
+    }
 }

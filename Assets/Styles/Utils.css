@@ -26,3 +26,9 @@
 .centertextx {
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .BlockForMobile {
+      display: none !important;
+    }
+}

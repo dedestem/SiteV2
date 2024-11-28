@@ -7,6 +7,6 @@ body {
     background-color: var(--background-color);
 }
 
-p, h1, h2 {
+p, h1, h2, h3, h4 {
     color: var(--p-text-color);
 }

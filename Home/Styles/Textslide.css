@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 /* Text Slides */
 .text-slide {
     position: absolute;
@@ -6,9 +10,11 @@
     font-size: 24px;
     font-weight: bold;
     color: var(--p-text-color);
-    transform: translateX(100%);
+    transform: translateX(100%); /* Starts off-screen to the right */
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
+    overflow: hidden; /* Hide overflow content */
+    will-change: transform; /* Performance optimization */
 }
 
 /* Active Slide */
@@ -19,6 +25,6 @@
 
 /* Exit Slide */
 .text-slide.exit {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Moves off-screen to the left */
     opacity: 0;
 }
