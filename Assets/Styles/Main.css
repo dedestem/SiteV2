@@ -2,9 +2,11 @@ body {
     margin: 0px;
     padding: 0px;
 
-    font-family: var(--font-family);
-
     background-color: var(--background-color);
+
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 p, h1, h2, h3, h4 {
