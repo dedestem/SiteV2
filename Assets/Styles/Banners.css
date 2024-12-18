@@ -19,6 +19,10 @@
     height: 30px;
 }
 
+.Danger-Banner > a {
+    color: #0A4E93;
+}
+
 .Warning-Banner {
     width: 100vw;
     height: 40px;
@@ -39,6 +43,10 @@
     height: 30px;
 }
 
+.Warning-Banner > a {
+    color: #0A4E93;
+}
+
 .Notice-Banner {
     width: 100vw;
     height: 40px;
@@ -57,4 +65,8 @@
 
 .Notice-Banner > img {
     height: 30px;
+}
+
+.Notice-Banner > a {
+    color: #0A4E93;
 }
